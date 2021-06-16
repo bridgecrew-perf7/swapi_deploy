@@ -58,7 +58,7 @@
 		 	        <plugin>
 			            <groupId>org.apache.maven.plugins</groupId>
 			            <artifactId>maven-dependency-plugin</artifactId>
-			            <version>3.0.0</version>
+			            <version>3.2.0</version>
 			            <executions>
 			                <execution>
 			                    <id>unpack</id>
@@ -94,7 +94,8 @@
 				                      <type>ear</type>
 				                    </artifactItem>
 				                </artifactItems>
-				                <outputDirectory>target/wildfly-${version.wildfly}/standalone/deployments</outputDirectory>
+				                <outputDirectory>target/wildfly-${version.wildfly}/standalone/deployments/</outputDirectory>
+								<stripVersion>true</stripVersion>
 				              </configuration>
 				            </execution>		                
 			            </executions>
