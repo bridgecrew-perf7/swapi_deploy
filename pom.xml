@@ -95,7 +95,7 @@
 				                    </artifactItem>
 				                </artifactItems>
 				                <outputDirectory>target/wildfly-${version.wildfly}/standalone/deployments/</outputDirectory>
-								<stripVersion>true</stripVersion>
+						<stripVersion>true</stripVersion>
 				              </configuration>
 				            </execution>		                
 			            </executions>
