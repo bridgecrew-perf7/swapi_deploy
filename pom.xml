@@ -54,12 +54,12 @@
            		<activeByDefault>true</activeByDefault>
         	</activation>	        
 	        <build>
-			<plugins>
-			        <plugin>
-				   <groupId>com.heroku.sdk</groupId>
-				   <artifactId>heroku-maven-plugin</artifactId>
-				   <version>3.0.3</version>
-			        </plugin>						
+				<plugins>
+					<plugin>
+						<groupId>com.heroku.sdk</groupId>
+						<artifactId>heroku-maven-plugin</artifactId>
+						<version>3.0.3</version>
+					</plugin>				
 		 	        <plugin>
 			            <groupId>org.apache.maven.plugins</groupId>
 			            <artifactId>maven-dependency-plugin</artifactId>
@@ -84,7 +84,7 @@
 			                        </artifactItems>
 			                    </configuration>
 			                </execution>
-					<execution>             
+				            <execution>             
 				              <id>deploy-ear</id>
 				              <phase>install</phase>
 				              <goals>
@@ -100,12 +100,15 @@
 				                    </artifactItem>
 				                </artifactItems>
 				                <outputDirectory>${basedir}/target/wildfly-${version.wildfly}/standalone/deployments/</outputDirectory>
-						<stripVersion>true</stripVersion>
+								<stripVersion>true</stripVersion>
 				              </configuration>
-				            </execution>				                
+				            </execution>		                
 			            </executions>
-			        </plugin>				
+			        </plugin>                               
 	            </plugins>
             </build>		
-
+         </profile>
+	</profiles>
+	<build>
+	</build>
 </project>
