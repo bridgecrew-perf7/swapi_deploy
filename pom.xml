@@ -43,6 +43,13 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+		<plugins>
+		  <plugin>
+			<groupId>com.heroku.sdk</groupId>
+			<artifactId>heroku-maven-plugin</artifactId>
+			<version>3.0.3</version>
+		  </plugin>
+		</plugins>		
     </build> 
 	<profiles>
 		<profile>
@@ -94,8 +101,7 @@
 				                      <type>ear</type>
 				                    </artifactItem>
 				                </artifactItems>
-				                <outputDirectory>target/wildfly-${version.wildfly}/standalone/deployments/</outputDirectory>
-								<stripVersion>true</stripVersion>
+				                <outputDirectory>${basedir}/target/wildfly-${version.wildfly}/standalone/deployments/</outputDirectory>
 				              </configuration>
 				            </execution>		                
 			            </executions>
@@ -104,5 +110,4 @@
             </build>		
          </profile>
 	</profiles>
- 
 </project>

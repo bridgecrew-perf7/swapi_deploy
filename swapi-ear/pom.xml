@@ -20,8 +20,7 @@
  
 
   <build>
-        <finalName>swapi</finalName>
-        <plugins>    
+         <plugins>    
            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
