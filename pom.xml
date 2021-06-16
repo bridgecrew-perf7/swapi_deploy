@@ -79,25 +79,7 @@
 			                        </artifactItems>
 			                    </configuration>
 			                </execution>
-				            <execution>             
-				              <id>deploy-ear</id>
-				              <phase>install</phase>
-				              <goals>
-				                <goal>copy</goal>
-				              </goals>
-				              <configuration>
-				                <artifactItems>
-				                    <artifactItem>
-				                      <groupId>${project.groupId}</groupId>
-				                      <artifactId>swapi-ear</artifactId>
-				                      <version>${project.version}</version>
-				                      <type>ear</type>
-				                    </artifactItem>
-				                </artifactItems>
-				                <outputDirectory>target/wildfly-${version.wildfly}/standalone/deployments/</outputDirectory>
-						<stripVersion>true</stripVersion>
-				              </configuration>
-				            </execution>		                
+			                
 			            </executions>
 			        </plugin>                               
 	            </plugins>
